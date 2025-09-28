@@ -1,0 +1,253 @@
+/* assets/css/style.css
+   OyinBlog - Dark navy aesthetic inspired by OYINDev
+   Responsive layout, card grid, navbar, mobile hamburger, article styling
+*/
+
+:root{
+  --bg-1: #071025;       /* deep navy */
+  --bg-2: #0b1630;       /* slightly lighter */
+  --card: #0f2134;
+  --muted: #98a6b5;
+  --text: #e9f1f8;
+  --accent-a: #22c1a5;   /* teal */
+  --accent-b: #7c4dff;   /* purple */
+  --glass: rgba(255,255,255,0.03);
+  --glass-2: rgba(255,255,255,0.02);
+  --radius: 12px;
+  --max-width: 1180px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 120%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Header / Navbar */
+header { position: sticky; top: 0; z-index: 60; backdrop-filter: blur(6px); }
+.navbar{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 20px;
+}
+.logo{
+  font-weight:700;
+  font-size:20px;
+  letter-spacing:0.6px;
+  color:var(--text);
+}
+.nav-links{
+  display:flex;
+  gap:12px;
+  list-style:none;
+  padding:0;
+  margin:0;
+  align-items:center;
+}
+.nav-links li a{
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:10px;
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+}
+.nav-links li a:hover,
+.nav-links li a.active{
+  background: linear-gradient(90deg, rgba(34,193,165,0.12), rgba(124,77,255,0.08));
+  box-shadow: 0 6px 18px rgba(2,6,23,0.25);
+}
+
+/* Hamburger for mobile */
+.hamburger{
+  display:none;
+  font-size:22px;
+  cursor:pointer;
+  padding:8px;
+  border-radius:8px;
+  background:transparent;
+  border: none;
+  color:var(--text);
+}
+
+/* Hero */
+.hero{
+  max-width: var(--max-width);
+  margin: 28px auto;
+  padding: 28px 20px;
+  text-align:center;
+}
+.hero h1{
+  margin:0;
+  font-size:34px;
+  line-height:1.05;
+}
+.hero p{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:16px;
+}
+
+/* Container & Grid */
+.articles-container{
+  max-width: var(--max-width);
+  margin: 12px auto 36px;
+  padding: 0 20px 40px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:18px;
+}
+
+/* Card */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+  padding:12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--glass);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(2,6,23,0.42);
+}
+.card img{
+  width:100%;
+  height:165px;
+  object-fit:cover;
+  border-radius:8px;
+  background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+.card h2{
+  margin:0;
+  font-size:18px;
+}
+.card p{ margin:0; color:var(--muted); font-size:14px; }
+.read-more{
+  color:#fff;
+  margin-top:auto;
+  display:inline-block;
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:10px;
+  background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  font-weight:700;
+  width:fit-content;
+  font-size:13px;
+}
+
+/* Category pages where full articles listed */
+.category-page .article-full{
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  margin-bottom:16px;
+  border:1px solid var(--glass);
+}
+.article-full h2{ margin:6px 0 10px; }
+.article-full img{ width:100%; height:300px; object-fit:cover; border-radius:8px; }
+
+/* Article (single full article) */
+.article{
+  max-width:900px;
+  margin:28px auto;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0.01));
+  border-radius:12px;
+  border:1px solid var(--glass);
+}
+.article h1{ margin-top:0; font-size:28px; }
+.article .meta{ color:var(--muted); font-size:13px; margin-bottom:10px; }
+.article img{ width:100%; height:auto; border-radius:8px; margin:12px 0; }
+.article p{ line-height:1.75; color: #dbe9f6; margin:12px 0; font-size:16px; }
+.article h2{ font-size:20px; margin-top:20px; margin-bottom:8px; }
+.article ul{ margin-left:20px; color:var(--muted) }
+
+/* Footer */
+footer{
+  max-width: var(--max-width);
+  margin: 36px auto;
+  padding:18px 20px;
+  text-align:center;
+  color:var(--muted);
+}
+
+/* Utilities */
+.container-row{ max-width:var(--max-width); margin:0 auto; padding:0 20px; }
+
+/* Responsive */
+@media (max-width:1024px){
+  .grid{ grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width:680px){
+  .grid{ grid-template-columns:1fr; gap:12px; }
+  .nav-links{ display:none; }
+  .hamburger{ display:block; }
+  .hero h1{ font-size:24px; }
+  .hero p{ font-size:14px; }
+}
+
+
+/* --- Filter toolbar & buttons --- */
+.filters{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin: 12px 0 18px;
+}
+
+/* Make category buttons look like pills and match site theme */
+.category-btn{
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  transition: transform .16s ease, box-shadow .16s ease, background .18s ease;
+  backdrop-filter: blur(4px);
+}
+
+/* subtle hover */
+.category-btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(2,6,23,0.35);
+  background: linear-gradient(90deg, rgba(34,193,165,0.06), rgba(124,77,255,0.04));
+}
+
+/* active/selected state */
+.category-btn.active{
+  background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  color: rgba(2,16,24,0.98); /* dark text on bright gradient */
+  border: none;
+  box-shadow: 0 14px 36px rgba(12,40,70,0.45);
+}
+
+/* keyboard focus */
+.category-btn:focus{
+  outline: 2px solid rgba(34,193,165,0.16);
+  outline-offset: 3px;
+}
+
+/* responsive adjustments */
+@media (max-width:680px){
+  .filters{ justify-content:center; gap:8px; padding: 8px 10px; }
+  .category-btn{ padding:7px 10px; font-size:13px; }
+}

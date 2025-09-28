@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OyinBlog — Knowledge Hub</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">OyinBlog</div>
+
+      <!-- desktop nav (navigates to category pages) -->
+      <ul class="nav-links">
+        <li><a href="index.html" data-cat="all" class="active">Home</a></li>
+        <li><a href="categories/education.html" data-cat="education">Education</a></li>
+        <li><a href="categories/insurance.html" data-cat="insurance">Insurance</a></li>
+        <li><a href="categories/legal.html" data-cat="legal">Legal Advice</a></li>
+        <li><a href="categories/finance.html" data-cat="finance">Finance</a></li>
+        <li><a href="categories/health.html" data-cat="health">Health</a></li>
+        <li><a href="categories/crypto.html" data-cat="crypto">Crypto</a></li>
+      </ul>
+<br><br>
+      <!-- mobile hamburger -->
+      <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero container-row">
+    <h1>Welcome to OyinBlog</h1>
+    <p>Your hub for Education, Insurance, Legal Advice, Finance, Health & Medical, and Cryptocurrency insights.</p>
+  </section>
+<br><br>
+  <!-- FILTER BUTTONS (for on-page filtering) -->
+  <div class="container-row" style="margin-top:8px;">
+    <div class="filters" role="toolbar" aria-label="Filter articles">
+      <button class="category-btn" data-cat="all">All</button>
+      <button class="category-btn" data-cat="education">Education</button>
+      <button class="category-btn" data-cat="insurance">Insurance</button>
+      <button class="category-btn" data-cat="legal">Legal</button>
+      <button class="category-btn" data-cat="finance">Finance</button>
+      <button class="category-btn" data-cat="health">Health</button>
+      <button class="category-btn" data-cat="crypto">Crypto</button>
+    </div>
+  </div>
+
+  <!-- ARTICLES GRID -->
+  <main class="container-row">
+    <section id="articlesContainer" class="grid" aria-live="polite">
+
+      <!-- EDUCATION -->
+      <div class="card education">
+        <img src="assets/images/placeholder.png" alt="Active recall">
+        <h3>The Ultimate Guide to Active Recall</h3>
+        <p>Discover how active recall and spaced repetition boost long-term memory and learning efficiency.</p>
+        <a class="read-more" href="articles/education/edu1.html">Read More</a>
+      </div>
+
+      <div class="card education">
+        <img src="assets/images/placeholder.png" alt="Online learning">
+        <h3>Online Learning: Tips for Success</h3>
+        <p>Practical strategies to stay motivated, organised, and effective when learning online.</p>
+        <a class="read-more" href="articles/education/edu2.html">Read More</a>
+      </div>
+
+      <div class="card education">
+        <img src="assets/images/placeholder.png" alt="Note taking">
+        <h3>Effective Note-Taking Methods</h3>
+        <p>From Cornell to mind maps — simple ways to take notes that actually help you remember.</p>
+        <a class="read-more" href="articles/education/edu3.html">Read More</a>
+      </div>
+
+      <!-- INSURANCE -->
+      <div class="card insurance">
+        <img src="assets/images/placeholder.png" alt="Life insurance">
+        <h3>Understanding Life Insurance</h3>
+        <p>What life insurance covers, types of policies, and how to choose what fits your family.</p>
+        <a class="read-more" href="articles/insurance/ins1.html">Read More</a>
+      </div>
+
+      <div class="card insurance">
+        <img src="assets/images/placeholder.png" alt="Car insurance">
+        <h3>Car Insurance Explained</h3>
+        <p>Liability, comprehensive and collision — the coverage that matter and how to save on premiums.</p>
+        <a class="read-more" href="articles/insurance/ins2.html">Read More</a>
+      </div>
+
+      <div class="card insurance">
+        <img src="assets/images/placeholder.png" alt="Health insurance">
+        <h3>Health Insurance Plans</h3>
+        <p>Compare premiums, deductibles and provider networks to find suitable healthcare coverage.</p>
+        <a class="read-more" href="articles/insurance/ins3.html">Read More</a>
+      </div>
+
+      <!-- FINANCE -->
+      <div class="card finance">
+        <img src="assets/images/placeholder.png" alt="Mortgages">
+        <h3>Mortgage 101: What You Should Know</h3>
+        <p>A practical overview of mortgages, interest rates, and the application process for first-time buyers.</p>
+        <a class="read-more" href="articles/finance/fin1.html">Read More</a>
+      </div>
+
+      <div class="card finance">
+        <img src="assets/images/placeholder.png" alt="Budgeting">
+        <h3>Mastering Personal Budgeting</h3>
+        <p>Realistic budgeting methods that actually help you save and reach financial goals.</p>
+        <a class="read-more" href="articles/finance/fin2.html">Read More</a>
+      </div>
+
+      <div class="card finance">
+        <img src="assets/images/placeholder.png" alt="Credit">
+        <h3>How to Build and Maintain Good Credit</h3>
+        <p>Simple steps to grow your credit score and avoid costly mistakes.</p>
+        <a class="read-more" href="articles/finance/fin3.html">Read More</a>
+      </div>
+
+      <!-- HEALTH -->
+      <div class="card health">
+        <img src="assets/images/placeholder.png" alt="Healthy living">
+        <h3>Healthy Living: A Complete Guide</h3>
+        <p>Practical daily habits for better sleep, diet and long-term wellbeing.</p>
+        <a class="read-more" href="articles/health/health1.html">Read More</a>
+      </div>
+
+      <div class="card health">
+        <img src="assets/images/placeholder.png" alt="Mental health">
+        <h3>Mental Health Awareness</h3>
+        <p>How to spot stress signs and practical steps to protect your mental health.</p>
+        <a class="read-more" href="articles/health/health2.html">Read More</a>
+      </div>
+
+      <div class="card health">
+        <img src="assets/images/placeholder.png" alt="Nutrition">
+        <h3>Nutrition Basics Everyone Should Know</h3>
+        <p>Key nutrients and simple meal ideas for strong energy and focus.</p>
+        <a class="read-more" href="articles/health/health3.html">Read More</a>
+      </div>
+
+      <!-- LEGAL -->
+      <div class="card legal">
+        <img src="assets/images/placeholder.png" alt="Contracts">
+        <h3>Understanding Contracts</h3>
+        <p>Clear, practical guidance to spot problem clauses and protect yourself legally.</p>
+        <a class="read-more" href="articles/legal/legal1.html">Read More</a>
+      </div>
+
+      <div class="card legal">
+        <img src="assets/images/placeholder.png" alt="Workplace rights">
+        <h3>Know Your Workplace Rights</h3>
+        <p>Employee rights simplified: contracts, wages, and reporting unfair treatment.</p>
+        <a class="read-more" href="articles/legal/legal2.html">Read More</a>
+      </div>
+
+      <div class="card legal">
+        <img src="assets/images/placeholder.png" alt="Property law">
+        <h3>Property Law Simplified</h3>
+        <p>An easy guide to ownership, tenancy and common property disputes.</p>
+        <a class="read-more" href="articles/legal/legal3.html">Read More</a>
+      </div>
+
+      <!-- CRYPTO -->
+      <div class="card crypto">
+        <img src="assets/images/placeholder.png" alt="Bitcoin">
+        <h3>Bitcoin Basics Explained</h3>
+        <p>What Bitcoin is, how it works and the risks & opportunities for beginners.</p>
+        <a class="read-more" href="articles/crypto/crypto1.html">Read More</a>
+      </div>
+
+      <div class="card crypto">
+        <img src="assets/images/placeholder.png" alt="Ethereum">
+        <h3>Ethereum & Smart Contracts</h3>
+        <p>How programmable money works and why smart contracts matter for apps.</p>
+        <a class="read-more" href="articles/crypto/crypto2.html">Read More</a>
+      </div>
+
+      <div class="card crypto">
+        <img src="assets/images/placeholder.png" alt="Crypto safety">
+        <h3>Staying Safe in Crypto</h3>
+        <p>Security basics: wallets, phishing, and protecting your keys.</p>
+        <a class="read-more" href="articles/crypto/crypto3.html">Read More</a>
+      </div>
+
+    </section>
+  </main>
+
+<br><br><br>
+  <!-- FOOTER -->
+  <footer class="container-row">
+    <p>Made with ❤ by Oluwayemi Oyinlola | <a href="https://portfolio-io-ashen.vercel.app" target="_blank">Portfolio</a></p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
